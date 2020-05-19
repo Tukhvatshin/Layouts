@@ -52,13 +52,36 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.button0:
                 resultField.setText(getText(R.string._0));
-                break;
+
         }
     }
 
     public void onOperationClick(View view) {
-        if (view.getId() == R.id.buttonTchk) {
-            resultField.setText(getText(R.string.tchk));
+        switch (view.getId()) {
+            case R.id.buttonC:
+                resultField.setText(getText(R.string._C));
+                break;
+            case R.id.buttonPlMn:
+                resultField.setText(getText(R.string.plMn));
+                break;
+            case R.id.buttonProcent:
+                resultField.setText(getText(R.string.procent));
+                break;
+            case R.id.buttonShare:
+                resultField.setText(getText(R.string.share));
+                break;
+            case R.id.buttonX:
+                resultField.setText(getText(R.string._X));
+                break;
+            case R.id.buttonMinus:
+                resultField.setText(getText(R.string.minus));
+                break;
+            case R.id.buttonPlus:
+                resultField.setText(getText(R.string.plus));
+                break;
+            case R.id.buttonEqually:
+                resultField.setText(getText(R.string.equally));
+                break;
         }
     }
 }

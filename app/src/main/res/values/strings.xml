@@ -11,4 +11,13 @@
     <string name="_3">3</string>
     <string name="_0">0</string>
     <string name="tchk">.</string>
+    <string name="_C">C</string>
+    <string name="procent">%</string>
+    <string name="plMn">+/-</string>
+    <string name="share">:</string>
+    <string name="_X">x</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="equally">=</string>
+
 </resources>
