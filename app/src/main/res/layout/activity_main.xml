@@ -1,26 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
 
     <TextView
         android:id="@+id/resultField"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:layout_margin="1dp"
         android:background="#101010"
-        android:textColor="#FBFAFA"
-        android:textSize="50sp"
         android:textAlignment="textEnd"
-        android:layout_margin="1dp"/>
+        android:textColor="#FBFAFA"
+        android:textSize="50sp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/resultField"
+        android:layout_gravity="center"
+        android:background="#535357">
+
+        <TextView
+            android:id="@+id/resultI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_i"
+            android:textColor="#FBFAFA"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toStartOf="@+id/resultV"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/resultV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_v"
+            android:textColor="#FBFAFA"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toStartOf="@+id/resultA"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/resultI"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/resultA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_a"
+            android:textColor="#FBFAFA"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toStartOf="@+id/resultN"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/resultV"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/resultN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_n"
+            android:textColor="#FBFAFA"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toStartOf="@+id/resultO"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/resultA"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/resultO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_o"
+            android:textColor="#FBFAFA"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toStartOf="@+id/resultF"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/resultN"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/resultF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_f"
+            android:textColor="#FBFAFA"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/resultO"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:id="@+id/first_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/resultField"
+        android:layout_below="@id/const_layout"
         android:layout_gravity="center"
         android:background="#535357">
 
@@ -48,7 +132,7 @@
             android:gravity="center"
             android:onClick="onOperationClick"
             android:text="@string/plMn"
-            android:textSize="50sp"/>
+            android:textSize="50sp" />
 
         <Button
             android:id="@+id/buttonProcent"
@@ -61,7 +145,7 @@
             android:gravity="center"
             android:onClick="onOperationClick"
             android:text="@string/procent"
-            android:textSize="50sp"/>
+            android:textSize="50sp" />
 
         <Button
             android:id="@+id/buttonShare"
@@ -75,7 +159,7 @@
             android:onClick="onOperationClick"
             android:text="@string/share"
             android:textColor="#FBFAFA"
-            android:textSize="50sp"/>
+            android:textSize="50sp" />
 
     </LinearLayout>
 
@@ -98,7 +182,7 @@
             android:gravity="center"
             android:onClick="onNumberClick"
             android:text="@string/_7"
-            android:textSize="50sp"/>
+            android:textSize="50sp" />
 
         <Button
             android:id="@+id/button8"
@@ -111,7 +195,7 @@
             android:gravity="center"
             android:onClick="onNumberClick"
             android:text="@string/_8"
-            android:textSize="50sp"/>
+            android:textSize="50sp" />
 
         <Button
             android:id="@+id/button9"
@@ -124,7 +208,7 @@
             android:gravity="center"
             android:onClick="onNumberClick"
             android:text="@string/_9"
-            android:textSize="50sp"/>
+            android:textSize="50sp" />
 
         <Button
             android:id="@+id/buttonX"
@@ -138,15 +222,15 @@
             android:onClick="onOperationClick"
             android:text="@string/_X"
             android:textColor="#FBFAFA"
-            android:textSize="50sp"/>
+            android:textSize="50sp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/third_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_below="@id/second_layout"
+        android:layout_gravity="center"
         android:background="#535357">
 
 
@@ -161,7 +245,7 @@
             android:gravity="center"
             android:onClick="onNumberClick"
             android:text="@string/_4"
-            android:textSize="50sp"/>
+            android:textSize="50sp" />
 
         <Button
             android:id="@+id/button5"
@@ -174,7 +258,7 @@
             android:gravity="center"
             android:onClick="onNumberClick"
             android:text="@string/_5"
-            android:textSize="50sp"/>
+            android:textSize="50sp" />
 
         <Button
             android:id="@+id/button6"
@@ -187,7 +271,7 @@
             android:gravity="center"
             android:onClick="onNumberClick"
             android:text="@string/_6"
-            android:textSize="50sp"/>
+            android:textSize="50sp" />
 
         <Button
             android:id="@+id/buttonMinus"
@@ -196,20 +280,20 @@
             android:layout_marginStart="1dp"
             android:layout_marginBottom="1dp"
             android:layout_weight="1"
-            android:gravity="center"
             android:background="#FF9800"
+            android:gravity="center"
             android:onClick="onOperationClick"
             android:text="@string/minus"
             android:textColor="#FBFAFA"
-            android:textSize="50sp"/>
+            android:textSize="50sp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/fourth_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_below="@id/third_layout"
+        android:layout_gravity="center"
         android:background="#535357">
 
 
@@ -220,11 +304,11 @@
             android:layout_marginStart="1dp"
             android:layout_marginBottom="1dp"
             android:layout_weight="1"
+            android:background="#E1DEDE"
             android:gravity="center"
             android:onClick="onNumberClick"
             android:text="@string/_1"
-            android:background="#E1DEDE"
-            android:textSize="50sp"/>
+            android:textSize="50sp" />
 
         <Button
             android:id="@+id/button2"
@@ -233,11 +317,11 @@
             android:layout_marginStart="1dp"
             android:layout_marginBottom="1dp"
             android:layout_weight="1"
+            android:background="#E1DEDE"
             android:gravity="center"
             android:onClick="onNumberClick"
             android:text="@string/_2"
-            android:background="#E1DEDE"
-            android:textSize="50sp"/>
+            android:textSize="50sp" />
 
         <Button
             android:id="@+id/button3"
@@ -246,11 +330,11 @@
             android:layout_marginStart="1dp"
             android:layout_marginBottom="1dp"
             android:layout_weight="1"
+            android:background="#E1DEDE"
             android:gravity="center"
             android:onClick="onNumberClick"
             android:text="@string/_3"
-            android:background="#E1DEDE"
-            android:textSize="50sp"/>
+            android:textSize="50sp" />
 
         <Button
             android:id="@+id/buttonPlus"
@@ -259,22 +343,22 @@
             android:layout_marginStart="1dp"
             android:layout_marginBottom="1dp"
             android:layout_weight="1"
-            android:gravity="center"
             android:background="#FF9800"
+            android:gravity="center"
             android:onClick="onOperationClick"
             android:text="@string/plus"
             android:textColor="#FBFAFA"
-            android:textSize="50sp"/>
+            android:textSize="50sp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/five_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal"
         android:layout_below="@id/fourth_layout"
-        android:background="#535357">
+        android:layout_gravity="center"
+        android:background="#535357"
+        android:orientation="horizontal">
 
 
         <Button
@@ -284,11 +368,11 @@
             android:layout_marginStart="1dp"
             android:layout_marginBottom="1dp"
             android:layout_weight="8"
+            android:background="#E1DEDE"
             android:gravity="center"
             android:onClick="onNumberClick"
             android:text="@string/_0"
-            android:background="#E1DEDE"
-            android:textSize="50sp"/>
+            android:textSize="50sp" />
 
         <Button
             android:id="@+id/buttonTchk"
@@ -297,11 +381,11 @@
             android:layout_marginStart="1dp"
             android:layout_marginBottom="1dp"
             android:layout_weight="1"
+            android:background="#E1DEDE"
             android:gravity="center"
             android:onClick="onOperationClick"
             android:text="@string/tchk"
-            android:background="#E1DEDE"
-            android:textSize="50sp"/>
+            android:textSize="50sp" />
 
         <Button
             android:id="@+id/buttonEqually"
@@ -315,7 +399,7 @@
             android:onClick="onOperationClick"
             android:text="@string/equally"
             android:textColor="#FBFAFA"
-            android:textSize="50sp"/>
+            android:textSize="50sp" />
     </LinearLayout>
 
 </RelativeLayout>

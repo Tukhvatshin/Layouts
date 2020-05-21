@@ -19,5 +19,11 @@
     <string name="minus">-</string>
     <string name="plus">+</string>
     <string name="equally">=</string>
+    <string name="_i">I</string>
+    <string name="_v">V</string>
+    <string name="_a">A</string>
+    <string name="_n">N</string>
+    <string name="_o">O</string>
+    <string name="_f">F</string>
 
 </resources>
