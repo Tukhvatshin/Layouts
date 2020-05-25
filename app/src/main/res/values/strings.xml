@@ -28,6 +28,6 @@
     <string name="buttonGone">кнопка переключения</string>
     <string name="btn_1">{}</string>
     <string name="btn_2">|</string>
-    <string name="btn_3"><![CDATA[<>]]></string>
+    <string name="btn_3">№</string>
 
 </resources>
