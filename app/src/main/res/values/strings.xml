@@ -19,11 +19,15 @@
     <string name="minus">-</string>
     <string name="plus">+</string>
     <string name="equally">=</string>
-    <string name="_i">I</string>
+    <string name="_i">Инженерный калькулятор</string>
     <string name="_v">V</string>
     <string name="_a">A</string>
     <string name="_n">N</string>
     <string name="_o">O</string>
     <string name="_f">F</string>
+    <string name="buttonGone">кнопка переключения</string>
+    <string name="btn_1">{}</string>
+    <string name="btn_2">|</string>
+    <string name="btn_3"><![CDATA[<>]]></string>
 
 </resources>

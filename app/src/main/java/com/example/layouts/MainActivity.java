@@ -2,23 +2,42 @@ package com.example.layouts;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     TextView resultField;
-
+    LinearLayout tech_clc;
+    Button buttonVG;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         initView();
+        onClickView();
+    }
+
+    private void onClickView() {
+        tech_clc = findViewById(R.id.tech_clc);
+        buttonVG = findViewById(R.id.buttonVG);
+        tech_clc.setVisibility(View.GONE);
+        buttonVG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (tech_clc.getVisibility() == View.GONE) {
+                    tech_clc.setVisibility(View.VISIBLE);
+                } else tech_clc.setVisibility(View.GONE);
+            }
+        });
     }
 
     private void initView() {
         resultField = findViewById(R.id.resultField);
+
     }
 
     public void onNumberClick(View view) {
